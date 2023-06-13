@@ -62,14 +62,22 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      announcementBar: {
+        id: "support_us",
+        content:
+          '🚀 如果你觉得还不错, 就给一个 ⭐️ Start 吧 ~ <a target="_blank" rel="noopener noreferrer" href="https://github.com/HiChen404/MyWikiSite/tree/master/">Click here</a> ',
+        backgroundColor: "#fafbfc",
+        textColor: "#091E42",
+        isCloseable: true,
+      },
+      // image: "img/docusaurus-social-card.jpg",
       navbar: {
-        // hideOnScroll:true,
+        hideOnScroll: true,
         title: "My Site",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
-        },
+        // logo: {
+        //   alt: "My Site Logo",
+        //   src: "img/logo.svg",
+        // },
         items: [
           {
             type: "docSidebar",
@@ -77,7 +85,21 @@ const config = {
             position: "left",
             label: "Tutorial",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          {
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+            items: [
+              {
+                href: "https://github.com/facebook/docusaurus",
+                label: "GitHub",
+              },
+              // {
+              //   href: "/github.com/facebook/docusaurus",
+              //   label: "GitHub",
+              // },
+            ],
+          },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
