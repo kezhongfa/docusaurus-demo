@@ -74,10 +74,11 @@ const config = {
       navbar: {
         hideOnScroll: true,
         title: "My Site",
-        // logo: {
-        //   alt: "My Site Logo",
-        //   src: "img/logo.svg",
-        // },
+        logo: {
+          alt: "My Site Logo",
+          src: "img/logo.svg",
+          // link: "pathname:///",
+        },
         items: [
           {
             type: "docSidebar",
@@ -179,6 +180,7 @@ const config = {
       }),
     ],
   ],
+  plugins: ["./plugin/local-webpack-plugin.js"],
 };
 
 module.exports = config;
